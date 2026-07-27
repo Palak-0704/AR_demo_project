@@ -9,7 +9,7 @@ async function startAr() {
 
     const mindarThree = new MindARThree({
         container: document.querySelector("#ar-container"),
-        imageTargetSrc: "./assets/targets.mind"
+        imageTargetSrc: "./targets.mind"
     });
 
     const {
