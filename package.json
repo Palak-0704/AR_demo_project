@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite"
   },
   "dependencies": {
     "mind-ar": "^1.2.5",
