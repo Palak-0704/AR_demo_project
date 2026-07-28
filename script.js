@@ -46,7 +46,8 @@ const geometry = new THREE.BoxGeometry(
 );
 
 const material = new THREE.MeshBasicMaterial({
-    color: 0xff0000
+    color: 0x00ff00,
+    wireframe: false
 });
 
 const cube = new THREE.Mesh(
@@ -54,13 +55,14 @@ const cube = new THREE.Mesh(
     material
 );
 
-// Exact center
+// Image ke exact center par
 cube.position.set(0, 0, 0);
 
-// Thoda 3D angle
+// Cube ko thoda rotate karenge
 cube.rotation.x = 0.5;
 cube.rotation.y = 0.5;
 
+// Anchor ke andar add
 anchor.group.add(cube);
 
 
