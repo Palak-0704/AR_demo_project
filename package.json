@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-  "mind-ar": "^1.2.5",
-  "three": "0.152.2"
+  "mind-ar": "1.2.5",
+  "three": "0.160.0"
 },
   "devDependencies": {
     "vite": "^6.4.3"
