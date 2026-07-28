@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mind-ar": "^1.2.5",
-    "three": "^0.158.0"
-  },
+  "mind-ar": "^1.2.5",
+  "three": "0.152.2"
+},
   "devDependencies": {
     "vite": "^6.4.3"
   }
