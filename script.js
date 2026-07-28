@@ -1,4 +1,4 @@
-import * as THREE from "three";
+/* import * as THREE from "three";
 import { MindARThree } from "mind-ar/dist/mindar-image-three.prod.js";
 
 const mindarThree = new MindARThree({
@@ -65,6 +65,52 @@ async function startAR() {
         renderer.render(scene, camera);
     });
 
+}
+
+startAR();
+ */
+
+import * as THREE from "three";
+import { MindARThree } from "mind-ar/dist/mindar-image-three.prod.js";
+
+const mindarThree = new MindARThree({
+    container: document.body,
+    imageTargetSrc: "/targets.mind"
+});
+
+const { renderer, scene, camera } = mindarThree;
+
+// Camera ke saamne directly cube
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+
+const material = new THREE.MeshBasicMaterial({
+    color: 0xff0000
+});
+
+const cube = new THREE.Mesh(
+    geometry,
+    material
+);
+
+// Camera ke saamne
+cube.position.set(0, 0, -2);
+
+scene.add(cube);
+
+
+// AR START
+async function startAR() {
+
+    await mindarThree.start();
+
+    console.log("AR STARTED");
+
+    renderer.setAnimationLoop(() => {
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+    });
 }
 
 startAR();
