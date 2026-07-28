@@ -39,7 +39,7 @@ anchor.onTargetLost = () => {
     status.innerText = "IMAGE LOST";
 };
 
-const geometry = new THREE.PlaneGeometry(1, 1);
+const geometry = new THREE.PlaneGeometry(2, 2);
 
 const material = new THREE.MeshBasicMaterial({
     color: 0x00ff00,
@@ -51,7 +51,7 @@ const plane = new THREE.Mesh(
     material
 );
 
-plane.position.set(0, 0, 0);
+plane.position.set(0, 0, 0.1);
 
 anchor.group.add(plane);
 
