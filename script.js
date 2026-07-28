@@ -5,14 +5,26 @@ const mindarThree = new MindARThree({
     imageTargetSrc:"/targets.mind"
 });
 
-const{renderer,scene,camera}= mindarThree;
-const anchor= mindarThree.addAnchor(0);
+const status = document.createElement("div");
+
+status.style.position = "fixed";
+status.style.top = "20px";
+status.style.left = "20px";
+status.style.zIndex = "9999";
+status.style.color = "white";
+status.style.background = "black";
+status.style.padding = "10px";
+
+status.innerText = "Searching for image...";
+
+document.body.appendChild(status);
+
 anchor.onTargetFound = () => {
-    console.log("IMAGE FOUND ✅");
+    status.innerText = "IMAGE FOUND ";
 };
 
 anchor.onTargetLost = () => {
-    console.log("IMAGE LOST ❌");
+    status.innerText = "IMAGE LOST ";
 };
 /* const scene = new THREE.Scene(); 
 const camera = new THREE.PerspectiveCamera(
