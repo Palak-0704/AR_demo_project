@@ -7,6 +7,13 @@ const mindarThree = new MindARThree({
 
 const{renderer,scene,camera}= mindarThree;
 const anchor= mindarThree.addAnchor(0);
+anchor.onTargetFound = () => {
+    console.log("IMAGE FOUND ✅");
+};
+
+anchor.onTargetLost = () => {
+    console.log("IMAGE LOST ❌");
+};
 /* const scene = new THREE.Scene(); 
 const camera = new THREE.PerspectiveCamera(
     75,
