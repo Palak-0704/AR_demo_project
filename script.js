@@ -51,9 +51,9 @@ const plane = new THREE.Mesh(
     material
 );
 
-plane.position.set(0, 0, 0.1);
+plane.position.set(0, 0, -2);
 
-anchor.group.add(plane);
+scene.add(plane);
 
 
 // AR start
