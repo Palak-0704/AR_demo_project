@@ -39,11 +39,10 @@ anchor.onTargetLost = () => {
     status.innerText = "IMAGE LOST";
 };
 
-
 const geometry = new THREE.BoxGeometry(
-    0.5,
-    0.5,
-    0.5
+    1,
+    1,
+    1
 );
 
 const material = new THREE.MeshBasicMaterial({
@@ -55,8 +54,10 @@ const cube = new THREE.Mesh(
     material
 );
 
-cube.position.set(0, 0, 0.1);
+// Exact center
+cube.position.set(0, 0, 0);
 
+// Thoda 3D angle
 cube.rotation.x = 0.5;
 cube.rotation.y = 0.5;
 
