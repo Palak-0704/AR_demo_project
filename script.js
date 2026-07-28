@@ -39,31 +39,21 @@ anchor.onTargetLost = () => {
     status.innerText = "IMAGE LOST";
 };
 
-const geometry = new THREE.BoxGeometry(
-    1,
-    1,
-    1
-);
+const geometry = new THREE.PlaneGeometry(1, 1);
 
 const material = new THREE.MeshBasicMaterial({
     color: 0x00ff00,
-    wireframe: false
+    side: THREE.DoubleSide
 });
 
-const cube = new THREE.Mesh(
+const plane = new THREE.Mesh(
     geometry,
     material
 );
 
-// Image ke exact center par
-cube.position.set(0, 0, 0);
+plane.position.set(0, 0, 0);
 
-// Cube ko thoda rotate karenge
-cube.rotation.x = 0.5;
-cube.rotation.y = 0.5;
-
-// Anchor ke andar add
-anchor.group.add(cube);
+anchor.group.add(plane);
 
 
 // AR start
