@@ -40,11 +40,10 @@ anchor.onTargetLost = () => {
 };
 
 
-// Cube
 const geometry = new THREE.BoxGeometry(
-    0.2,
-    0.2,
-    0.2
+    0.5,
+    0.5,
+    0.5
 );
 
 const material = new THREE.MeshBasicMaterial({
@@ -56,8 +55,11 @@ const cube = new THREE.Mesh(
     material
 );
 
+cube.position.set(0, 0, 0.1);
 
-// Cube ko target image ke anchor ke saath attach karo
+cube.rotation.x = 0.5;
+cube.rotation.y = 0.5;
+
 anchor.group.add(cube);
 
 
